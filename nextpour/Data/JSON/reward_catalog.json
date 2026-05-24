@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rc1",
+    "title": "Complimentary Craft Cocktail",
+    "description": "Redeem for one house craft cocktail on your next visit during bar hours.",
+    "pointsCost": 500,
+    "hostName": "PORT Detroit",
+    "hostType": "venue",
+    "category": "Drink"
+  },
+  {
+    "id": "rc2",
+    "title": "VIP Table Reservation",
+    "description": "Guaranteed table for two on a Friday or Saturday night — no wait, no stress.",
+    "pointsCost": 1200,
+    "hostName": "The Nest Bar",
+    "hostType": "venue",
+    "category": "Experience"
+  },
+  {
+    "id": "rc3",
+    "title": "Mixology Class Pass",
+    "description": "Free entry to any upcoming mixology workshop hosted at the lounge.",
+    "pointsCost": 800,
+    "hostName": "Nelson Cocktail Lounge",
+    "hostType": "venue",
+    "category": "Class"
+  },
+  {
+    "id": "rc4",
+    "title": "Bartender's Choice Flight",
+    "description": "Let the house bartender curate a 4-pour tasting flight for you.",
+    "pointsCost": 650,
+    "hostName": "The Copper Bar",
+    "hostType": "venue",
+    "category": "Drink"
+  },
+  {
+    "id": "rc5",
+    "title": "Spirits Tasting Night Guest Pass",
+    "description": "Bring a friend for free to the next exclusive spirits tasting evening.",
+    "pointsCost": 900,
+    "hostName": "Blin Social House",
+    "hostType": "venue",
+    "category": "Experience"
+  },
+  {
+    "id": "rc6",
+    "title": "Early Market Bar Access",
+    "description": "Skip the line with early-door access on Eastern Market weekends.",
+    "pointsCost": 400,
+    "hostName": "Eastern Market Bar",
+    "hostType": "venue",
+    "category": "Experience"
+  },
+  {
+    "id": "rc7",
+    "title": "Private Event Consultation",
+    "description": "One-on-one session with a host to plan your next private event or tasting.",
+    "pointsCost": 1500,
+    "hostName": "Detroit Pour Events",
+    "hostType": "eventHost",
+    "category": "Experience"
+  },
+  {
+    "id": "rc8",
+    "title": "Featured Guest at Live Tasting",
+    "description": "Join the next live-streamed tasting event as a featured guest participant.",
+    "pointsCost": 1000,
+    "hostName": "UNP Live Events",
+    "hostType": "eventHost",
+    "category": "Experience"
+  },
+  {
+    "id": "rc9",
+    "title": "Ambassador Cocktail Kit",
+    "description": "Curated kit of premium spirits and garnishes delivered for at-home mixing.",
+    "pointsCost": 2000,
+    "hostName": "UNP Live Events",
+    "hostType": "eventHost",
+    "category": "Kit"
+  },
+  {
+    "id": "rc10",
+    "title": "Pop-Up Bar Ticket",
+    "description": "Exclusive access to the next UNP pop-up bar experience in Detroit.",
+    "pointsCost": 750,
+    "hostName": "Detroit Pour Events",
+    "hostType": "eventHost",
+    "category": "Experience"
+  }
+]

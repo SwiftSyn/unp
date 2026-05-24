@@ -1,0 +1,6 @@
+﻿[
+  {"id":"bc1","title":"Sunrise Yoga Mixology","description":"Start your day with mindful movements and the art of craft cocktail making. A unique mind-body-pour experience.","instructorName":"Miranda Lrouge","durationMinutes":90,"isLocked":true,"attendeeCount":14,"imageURL":null,"category":"Wellness"},
+  {"id":"bc2","title":"Advanced Cocktail Techniques","description":"Master clarification, fat-washing, and advanced batching for home and professional bars.","instructorName":"Chef Andre William","durationMinutes":120,"isLocked":true,"attendeeCount":22,"imageURL":null,"category":"Technique"},
+  {"id":"bc3","title":"Whiskey Tasting Masterclass","description":"Deep dive into American whiskey — distillation, aging, mash bills, and sensory evaluation.","instructorName":"Maddy R","durationMinutes":105,"isLocked":true,"attendeeCount":18,"imageURL":null,"category":"Education"},
+  {"id":"bc4","title":"Classic Martini Workshop","description":"Demystify the martini. Learn the gin-to-vermouth ratio, stirring technique, and garnish mastery.","instructorName":"Miranda Lrouge","durationMinutes":75,"isLocked":false,"attendeeCount":30,"imageURL":null,"category":"Classics"}
+]

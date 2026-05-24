@@ -1,0 +1,7 @@
+﻿[
+  {"id":"u1","name":"Alex Rivera","email":"alex@sipsync.com","role":"consumer","avatarURL":null,"bio":"Cocktail enthusiast exploring the city's best pours","isAmbassador":true,"rewardPoints":2450,"rewardTier":"gold"},
+  {"id":"u2","name":"Jordan Lee","email":"jordan@sipsync.com","role":"bartender","avatarURL":null,"bio":"Craft cocktail specialist with 8 years behind the bar","isAmbassador":false,"rewardPoints":1200,"rewardTier":"silver"},
+  {"id":"u3","name":"Maya Santos","email":"maya@sipsync.com","role":"consumer","avatarURL":null,"bio":"Wine lover and weekend adventurer","isAmbassador":true,"rewardPoints":850,"rewardTier":"silver"},
+  {"id":"u4","name":"The Copper Bar","email":"info@copperbar.com","role":"venue","avatarURL":null,"bio":"Award-winning craft cocktail bar in the heart of downtown","isAmbassador":false,"rewardPoints":5200,"rewardTier":"gold"},
+  {"id":"u5","name":"Chris Nguyen","email":"chris@sipsync.com","role":"consumer","avatarURL":null,"bio":"Amateur mixologist and spirits collector","isAmbassador":false,"rewardPoints":430,"rewardTier":"bronze"}
+]

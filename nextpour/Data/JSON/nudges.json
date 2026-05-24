@@ -1,0 +1,4 @@
+﻿[
+  {"id":"n1","question":"What is your pour tonight?","options":[{"id":"n1o1","text":"Classic Cocktail","voteCount":142},{"id":"n1o2","text":"Wine","voteCount":89},{"id":"n1o3","text":"Craft Beer","voteCount":67},{"id":"n1o4","text":"Mocktail","voteCount":34}],"expiresAt":"2026-12-31T06:00:00Z"},
+  {"id":"n2","question":"Which spirit are you feeling this Friday?","options":[{"id":"n2o1","text":"Whiskey","voteCount":201},{"id":"n2o2","text":"Gin","voteCount":155},{"id":"n2o3","text":"Tequila","voteCount":98},{"id":"n2o4","text":"Rum","voteCount":72}],"expiresAt":"2026-12-31T06:00:00Z"}
+]

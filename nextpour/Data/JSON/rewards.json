@@ -1,0 +1,5 @@
+﻿[
+  {"id":"r1","userId":"u1","tier":"gold","points":2450,"history":[{"id":"rt1","description":"Recipe upload bonus","points":150,"date":"2026-04-28T00:00:00Z"},{"id":"rt2","description":"Event attendance","points":100,"date":"2026-04-20T00:00:00Z"},{"id":"rt3","description":"Share reward","points":50,"date":"2026-04-15T00:00:00Z"},{"id":"rt4","description":"Circle activity bonus","points":75,"date":"2026-04-10T00:00:00Z"}]},
+  {"id":"r2","userId":"u2","tier":"silver","points":1200,"history":[{"id":"rt5","description":"Bartender class hosted","points":200,"date":"2026-04-25T00:00:00Z"},{"id":"rt6","description":"Event attendance","points":100,"date":"2026-04-18T00:00:00Z"}]},
+  {"id":"r3","userId":"u5","tier":"bronze","points":430,"history":[{"id":"rt7","description":"First recipe save","points":30,"date":"2026-04-22T00:00:00Z"},{"id":"rt8","description":"Community post","points":50,"date":"2026-04-19T00:00:00Z"}]}
+]

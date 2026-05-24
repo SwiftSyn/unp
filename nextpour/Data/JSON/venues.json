@@ -1,0 +1,8 @@
+﻿[
+  {"id":"v1","name":"PORT Detroit","address":"456 Woodward Ave, Detroit, MI 48226","imageURL":null,"rating":4.8,"category":"Cocktail Bar","distanceMiles":0.4,"isOpen":true},
+  {"id":"v2","name":"The Nest Bar","address":"123 Main St, Detroit, MI 48201","imageURL":null,"rating":4.7,"category":"Premium Lounge","distanceMiles":0.9,"isOpen":true},
+  {"id":"v3","name":"Nelson Cocktail Lounge","address":"789 River Rd, Detroit, MI 48207","imageURL":null,"rating":4.6,"category":"Craft Bar","distanceMiles":1.2,"isOpen":true},
+  {"id":"v4","name":"The Copper Bar","address":"220 W Congress St, Detroit, MI 48226","imageURL":null,"rating":4.5,"category":"Restaurant and Bar","distanceMiles":0.7,"isOpen":false},
+  {"id":"v5","name":"Blin Social House","address":"4120 Woodward Ave, Detroit, MI 48201","imageURL":null,"rating":4.4,"category":"Social Bar","distanceMiles":1.8,"isOpen":true},
+  {"id":"v6","name":"Eastern Market Bar","address":"2934 Russell St, Detroit, MI 48207","imageURL":null,"rating":4.3,"category":"Market Bar","distanceMiles":2.1,"isOpen":true}
+]

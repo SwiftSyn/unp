@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
+    <entity name="NPUser" representedClassName="NPUser" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="email" attributeType="String" defaultValueString=""/>
+        <attribute name="role" attributeType="String" defaultValueString="consumer"/>
+        <attribute name="avatarURL" optional="YES" attributeType="String"/>
+        <attribute name="bio" attributeType="String" defaultValueString=""/>
+        <attribute name="isAmbassador" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="rewardPoints" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rewardTier" attributeType="String" defaultValueString="bronze"/>
+    </entity>
+    <entity name="NPBeverage" representedClassName="NPBeverage" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="beverageDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="ingredients" attributeType="String" defaultValueString="[]"/>
+        <attribute name="steps" attributeType="String" defaultValueString="[]"/>
+        <attribute name="category" attributeType="String" defaultValueString="classics"/>
+        <attribute name="rating" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="isAmbassadorUpload" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="authorId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NPBartender" representedClassName="NPBartender" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="specialties" attributeType="String" defaultValueString="[]"/>
+        <attribute name="rating" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="isVerified" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="bio" attributeType="String" defaultValueString=""/>
+        <attribute name="yearsExperience" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="NPBartenderClass" representedClassName="NPBartenderClass" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="classDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="instructorName" attributeType="String" defaultValueString=""/>
+        <attribute name="durationMinutes" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isLocked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="attendeeCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="category" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="NPEvent" representedClassName="NPEvent" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="eventDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="venueName" attributeType="String" defaultValueString=""/>
+        <attribute name="venueAddress" attributeType="String" defaultValueString=""/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="category" attributeType="String" defaultValueString="social"/>
+        <attribute name="attendeeCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isFeatured" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="NPVenue" representedClassName="NPVenue" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="address" attributeType="String" defaultValueString=""/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="rating" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="category" attributeType="String" defaultValueString=""/>
+        <attribute name="distanceMiles" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="isOpen" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="NPPost" representedClassName="NPPost" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="authorId" attributeType="String" defaultValueString=""/>
+        <attribute name="authorName" attributeType="String" defaultValueString=""/>
+        <attribute name="authorAvatarURL" optional="YES" attributeType="String"/>
+        <attribute name="content" attributeType="String" defaultValueString=""/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="likeCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="commentCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="drinkTag" optional="YES" attributeType="String"/>
+        <attribute name="isLiked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="NPNudge" representedClassName="NPNudge" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="question" attributeType="String" defaultValueString=""/>
+        <attribute name="optionsJSON" attributeType="String" defaultValueString="[]"/>
+        <attribute name="expiresAt" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="NPPourCircle" representedClassName="NPPourCircle" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="circleDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="memberCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="lastActivity" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isMember" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="NPCommunityMessage" representedClassName="NPCommunityMessage" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="senderId" attributeType="String" defaultValueString=""/>
+        <attribute name="senderName" attributeType="String" defaultValueString=""/>
+        <attribute name="senderAvatarURL" optional="YES" attributeType="String"/>
+        <attribute name="content" attributeType="String" defaultValueString=""/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eventId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NPReward" representedClassName="NPReward" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="userId" attributeType="String" defaultValueString=""/>
+        <attribute name="tier" attributeType="String" defaultValueString="bronze"/>
+        <attribute name="points" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="historyJSON" attributeType="String" defaultValueString="[]"/>
+    </entity>
+    <elements>
+        <element name="NPUser" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="NPBeverage" positionX="160" positionY="0" width="128" height="220"/>
+        <element name="NPBartender" positionX="320" positionY="0" width="128" height="180"/>
+        <element name="NPBartenderClass" positionX="480" positionY="0" width="128" height="200"/>
+        <element name="NPEvent" positionX="0" positionY="220" width="128" height="200"/>
+        <element name="NPVenue" positionX="160" positionY="240" width="128" height="180"/>
+        <element name="NPPost" positionX="320" positionY="220" width="128" height="220"/>
+        <element name="NPNudge" positionX="480" positionY="220" width="128" height="120"/>
+        <element name="NPPourCircle" positionX="0" positionY="460" width="128" height="160"/>
+        <element name="NPCommunityMessage" positionX="160" positionY="460" width="128" height="160"/>
+        <element name="NPReward" positionX="320" positionY="460" width="128" height="120"/>
+    </elements>
+</model>

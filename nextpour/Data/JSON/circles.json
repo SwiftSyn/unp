@@ -1,0 +1,6 @@
+﻿[
+  {"id":"c1","name":"Negroni Nights","description":"Weekly meetup crew dedicated to hunting down the city best Negroni","memberCount":12,"imageURL":null,"lastActivity":"2026-05-01T20:00:00Z","isMember":true},
+  {"id":"c2","name":"Whiskey Wanderers","description":"Exploring premium American whiskey one pour at a time","memberCount":8,"imageURL":null,"lastActivity":"2026-04-30T19:30:00Z","isMember":false},
+  {"id":"c3","name":"Detroit Pour Crew","description":"Local Detroit bartenders and enthusiasts sharing the city best finds","memberCount":24,"imageURL":null,"lastActivity":"2026-05-01T15:00:00Z","isMember":true},
+  {"id":"c4","name":"Zero Proof Club","description":"Craft mocktail enthusiasts proving that alcohol-free can be extraordinary","memberCount":16,"imageURL":null,"lastActivity":"2026-04-29T18:00:00Z","isMember":false}
+]

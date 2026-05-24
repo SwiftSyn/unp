@@ -1,0 +1,6 @@
+﻿[
+  {"id":"b1","name":"Miranda Lrouge","specialties":["Classic Cocktails","Negroni Variations","Gin"],"rating":4.9,"imageURL":null,"isVerified":true,"bio":"Award-winning mixologist with 10 years crafting perfect pours at PORT Detroit","yearsExperience":10},
+  {"id":"b2","name":"Chef Andre William","specialties":["Culinary Cocktails","Whiskey","Detroit Originals"],"rating":4.8,"imageURL":null,"isVerified":true,"bio":"Bringing culinary precision to craft cocktails at Nelson Cocktail Lounge","yearsExperience":8},
+  {"id":"b3","name":"Maddy R","specialties":["Tiki Cocktails","Rum","Tropical Drinks"],"rating":4.7,"imageURL":null,"isVerified":false,"bio":"Tropical spirits specialist bringing island vibes to Detroit cocktail scene","yearsExperience":5},
+  {"id":"b4","name":"Antonio Ruiz","specialties":["Mezcal","Agave Spirits","Mexican Cocktails"],"rating":4.6,"imageURL":null,"isVerified":true,"bio":"Agave spirit advocate and mezcal sommelier at The Nest Bar","yearsExperience":7}
+]

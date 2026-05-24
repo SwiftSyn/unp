@@ -1,0 +1,66 @@
+# ==========================================
+# Swift / Xcode — nextpour iOS app
+# ==========================================
+
+# ── macOS system files ──────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ── Xcode user-specific data ────────────
+# Each developer has their own window layout,
+# breakpoints, and UI state — never shared.
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# ── Xcode build output ──────────────────
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+*.dSYM
+*.dSYM.zip
+
+# ── Swift Package Manager ───────────────
+# The hidden .swiftpm folder holds local
+# (machine-specific) SPM config.
+.swiftpm/
+
+# Package.resolved pins exact dependency
+# versions — commit it for apps so all
+# teammates build with the same versions.
+# Uncomment the line below ONLY if you
+# intentionally want floating versions:
+# Package.resolved
+
+# ── CocoaPods (not currently used) ──────
+# Pods/
+# Podfile.lock
+
+# ── Carthage (not currently used) ───────
+# Carthage/Build/
+
+# ── Fastlane ────────────────────────────
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# ── Sensitive / environment files ───────
+# Never commit API keys or secrets!
+*.env
+.env
+Secrets.swift
+Config.xcconfig
+GoogleService-Info.plist
+
+# ── Playgrounds ─────────────────────────
+timeline.xctimeline
+playground.xcworkspace
+
+# ── Other ───────────────────────────────
+*.log
