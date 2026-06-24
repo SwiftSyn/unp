@@ -6,6 +6,8 @@ struct PourJourneyView: View {
     @State private var showOriginals = false
     @State private var isSaved = false
     @State private var relatedBeverages: [Beverage] = []
+    @State private var showMoodSelector = false
+    @State private var selectedMood: UserMood? = nil
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -14,6 +16,10 @@ struct PourJourneyView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: UNPSpacing.lg) {
                     heroCard
+                    if selectedMood != nil {
+                        moodSuggestionBanner
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                    }
                     recipeCard
                     ingredientsCard
                     methodCard
@@ -44,14 +50,31 @@ struct PourJourneyView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: UNPSpacing.xs) {
-                    toolbarChip("Beverage", icon: "wineglass.fill", accent: true) {
-                        showBeverageSearch = true
+                    Button { showMoodSelector = true } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: selectedMood == nil ? "face.smiling" : "face.smiling.fill")
+                                .font(.system(size: 13))
+                            Text(selectedMood == nil ? "My Mood" : selectedMood!.label)
+                                .font(UNPFontStyle.caption())
+                        }
+                        .foregroundStyle(selectedMood == nil ? UNPColor.neonLight : .black)
+                        .padding(.horizontal, UNPSpacing.sm)
+                        .padding(.vertical, 6)
+                        .background(selectedMood == nil ? LinearGradient(colors: [UNPColor.neon.opacity(0.15), UNPColor.neon.opacity(0.15)], startPoint: .top, endPoint: .bottom) : UNPColor.emberGradient)
+                        .clipShape(Capsule())
                     }
-                    toolbarChip("UNP Originals", icon: "play.circle.fill", accent: false) {
-                        showOriginals = true
+                    toolbarChip("Beverage", icon: "wineglass.fill", accent: false) {
+                        showBeverageSearch = true
                     }
                 }
             }
+        }
+        .sheet(isPresented: $showMoodSelector) {
+            MoodSelectorView(selectedMood: $selectedMood) { mood in selectedMood = mood }
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+                .presentationBackground(UNPColor.background)
+                .presentationCornerRadius(UNPRadius.extraLarge)
         }
         .navigationDestination(isPresented: $showBeverageSearch) {
             BeverageSearchView()
@@ -60,11 +83,52 @@ struct PourJourneyView: View {
             OriginalsView()
         }
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isSaved)
+        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: selectedMood)
         .task {
             if let beverages = try? await DIContainer.shared.makeFetchBeveragesUseCase().execute() {
                 relatedBeverages = Array(beverages.prefix(4))
             }
         }
+    }
+
+    private var moodSuggestionBanner: some View {
+        VStack(alignment: .leading, spacing: UNPSpacing.sm) {
+            HStack {
+                HStack(spacing: UNPSpacing.xs) {
+                    Image(systemName: "sparkles")
+                        .font(.system(size: 11))
+                        .foregroundStyle(UNPColor.ember)
+                    Text("POURED FOR YOUR MOOD")
+                        .font(UNPFontStyle.label())
+                        .foregroundStyle(UNPColor.ember)
+                        .tracking(0.5)
+                }
+                Spacer()
+                Button { selectedMood = nil } label: {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 11))
+                        .foregroundStyle(UNPColor.textMuted)
+                }
+            }
+
+            if let mood = selectedMood {
+                HStack(spacing: 4) {
+                    Image(systemName: mood.icon).font(.system(size: 10))
+                    Text(mood.label).font(UNPFontStyle.label())
+                }
+                .foregroundStyle(UNPColor.neonLight)
+                .padding(.horizontal, UNPSpacing.sm)
+                .padding(.vertical, UNPSpacing.xs)
+                .background(UNPColor.neon.opacity(0.12))
+                .clipShape(Capsule())
+            }
+
+            Text("This pour was selected to match your current vibe. Tap \"My Mood\" to refine.")
+                .font(UNPFontStyle.caption(12))
+                .foregroundStyle(UNPColor.textMuted)
+        }
+        .padding(UNPSpacing.md)
+        .unpCard()
     }
 
     private func toolbarChip(_ label: String, icon: String, accent: Bool, action: @escaping () -> Void) -> some View {

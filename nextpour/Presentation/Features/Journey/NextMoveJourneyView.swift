@@ -2,10 +2,9 @@ import SwiftUI
 
 struct NextMoveJourneyView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var showMoodSelector = false
-    @State private var selectedMoods: Set<UserMood> = []
     @State private var selectedVibe: NudgeVibe? = nil
     @State private var activeTab: MoveTab = .tonight
+    @State private var showExploreEvents = false
 
     enum MoveTab: String, CaseIterable {
         case tonight = "Tonight's Move"
@@ -30,11 +29,10 @@ struct NextMoveJourneyView: View {
                 .padding(.top, UNPSpacing.sm)
             }
 
-            if !selectedMoods.isEmpty {
-                moodBanner
-                    .padding(.horizontal, UNPSpacing.md)
-                    .padding(.bottom, UNPSpacing.md)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
+        }
+        .sheet(isPresented: $showExploreEvents) {
+            NavigationStack {
+                EventMapListView(onSelectEvent: { _ in showExploreEvents = false })
             }
         }
         .navigationBarBackButtonHidden()
@@ -51,30 +49,7 @@ struct NextMoveJourneyView: View {
                     .font(UNPFontStyle.heading(16))
                     .foregroundStyle(UNPColor.textPrimary)
             }
-            ToolbarItem(placement: .topBarTrailing) {
-                Button { showMoodSelector = true } label: {
-                    HStack(spacing: 4) {
-                        Image(systemName: "face.smiling")
-                            .font(.system(size: 14))
-                        Text("User Mood")
-                            .font(UNPFontStyle.caption())
-                    }
-                    .foregroundStyle(UNPColor.neonLight)
-                    .padding(.horizontal, UNPSpacing.sm)
-                    .padding(.vertical, 6)
-                    .background(UNPColor.neon.opacity(0.15))
-                    .clipShape(Capsule())
-                }
-            }
         }
-        .sheet(isPresented: $showMoodSelector) {
-            MoodSelectorView(selectedMoods: $selectedMoods) { moods in selectedMoods = moods }
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-                .presentationBackground(UNPColor.background)
-                .presentationCornerRadius(UNPRadius.extraLarge)
-        }
-        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: selectedMoods)
     }
 
     private var contextBanner: some View {
@@ -127,7 +102,39 @@ struct NextMoveJourneyView: View {
             vibeSelector
             tonightTimeline
             linkedContent
+            exploreFallbackRow
         }
+    }
+
+    private var exploreFallbackRow: some View {
+        Button(action: { showExploreEvents = true }) {
+            HStack(spacing: UNPSpacing.md) {
+                ZStack {
+                    Circle()
+                        .fill(UNPColor.ember.opacity(0.15))
+                        .frame(width: 44, height: 44)
+                    Image(systemName: "map.fill")
+                        .font(.system(size: 18))
+                        .foregroundStyle(UNPColor.ember)
+                }
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("Not feeling tonight's plan?")
+                        .font(UNPFontStyle.heading(14))
+                        .foregroundStyle(UNPColor.textPrimary)
+                    Text("Explore events & venues to build your own...")
+                        .font(UNPFontStyle.caption(12))
+                        .foregroundStyle(UNPColor.textMuted)
+                        .lineLimit(1)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(UNPColor.textMuted)
+            }
+            .padding(UNPSpacing.md)
+            .unpCard()
+        }
+        .buttonStyle(.plain)
     }
 
     private var liveActivityStrip: some View {
@@ -269,29 +276,6 @@ struct NextMoveJourneyView: View {
         .background(UNPColor.surface)
         .clipShape(Capsule())
         .overlay(Capsule().stroke(color.opacity(0.25), lineWidth: 1))
-    }
-
-    private var moodBanner: some View {
-        HStack(spacing: UNPSpacing.sm) {
-            ForEach(Array(selectedMoods.prefix(3)), id: \.self) { mood in
-                HStack(spacing: 3) {
-                    Image(systemName: mood.icon).font(.system(size: 10))
-                    Text(mood.label).font(UNPFontStyle.label())
-                }
-                .foregroundStyle(UNPColor.neonLight)
-            }
-            if selectedMoods.count > 3 {
-                Text("+\(selectedMoods.count - 3)").font(UNPFontStyle.label()).foregroundStyle(UNPColor.textMuted)
-            }
-            Spacer()
-            Button { selectedMoods.removeAll() } label: {
-                Image(systemName: "xmark").font(.system(size: 11)).foregroundStyle(UNPColor.textMuted)
-            }
-        }
-        .padding(.horizontal, UNPSpacing.md)
-        .padding(.vertical, UNPSpacing.sm)
-        .background(.ultraThinMaterial)
-        .clipShape(Capsule())
     }
 
     private var circleChatContent: some View {

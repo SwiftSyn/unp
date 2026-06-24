@@ -56,7 +56,7 @@ struct ExploreJourneyView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: UNPSpacing.xs) {
-                    toolbarChip(label: "Event", icon: "calendar", accent: false, action: { showMapListView = true })
+                    toolbarChip(label: "Events", icon: "calendar", accent: false, action: { showMapListView = true })
                     toolbarChip(label: "Upload Event", icon: "plus", accent: true, action: { showUploadEvent = true })
                 }
             }
@@ -326,7 +326,7 @@ struct ExploreJourneyView: View {
         ContentUnavailableView {
             Label("No Event Selected", systemImage: "map")
         } description: {
-            Text("Tap \"Event\" above to browse what's happening near you.")
+            Text("Tap \"Events\" above to browse what's happening near you.")
         } actions: {
             Button("Browse Events") { showMapListView = true }
                 .font(UNPFontStyle.heading(14))

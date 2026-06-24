@@ -1,20 +1,23 @@
 {
-  "images" : [
+  "images": [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
+      "filename": "If anyone offers me a drink, give me Oaxaca Old Fashioned Γëí╞Æy╠êe╠ê.jpeg",
+      "idiom": "universal",
+      "scale": "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "2x"
+      "filename": "If anyone offers me a drink, give me Oaxaca Old Fashioned Γëí╞Æy╠êe╠ê 1.jpeg",
+      "idiom": "universal",
+      "scale": "2x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename": "If anyone offers me a drink, give me Oaxaca Old Fashioned Γëí╞Æy╠êe╠ê 2.jpeg",
+      "idiom": "universal",
+      "scale": "3x"
     }
   ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
+  "info": {
+    "author": "xcode",
+    "version": 1
   }
 }

@@ -12,7 +12,7 @@ final class BartenderClassLocalDataSource {
         let request = NSFetchRequest<NPBartenderClass>(entityName: "NPBartenderClass")
         return try context.fetch(request).map {
             BartenderClassDTO(id: $0.id ?? "", title: $0.title ?? "",
-                              description: $0.classDescription ?? "",
+                              description: $0.classDesc ?? "",
                               instructorName: $0.instructorName ?? "",
                               durationMinutes: Int($0.durationMinutes),
                               isLocked: $0.isLocked,

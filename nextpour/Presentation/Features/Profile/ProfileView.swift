@@ -177,7 +177,7 @@ struct ProfileView: View {
     private func auraCard(_ reward: Reward) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: UNPRadius.large)
-                .fill(UNPColor.midnight)
+                .fill(UNPColor.surface)
                 .overlay(
                     RoundedRectangle(cornerRadius: UNPRadius.large)
                         .stroke(reward.tier.color.opacity(0.28), lineWidth: 1)
@@ -366,10 +366,6 @@ struct ProfileView: View {
 
             settingsGroup(header: "Support") {
                 NavRow(icon: "questionmark.circle.fill", label: "Help & Support") {}
-                Divider().background(UNPColor.surfaceElevated).padding(.leading, UNPSpacing.lg)
-                NavRow(icon: "gearshape.fill", label: "Settings") {
-                    showSettings = true
-                }
             }
         }
     }

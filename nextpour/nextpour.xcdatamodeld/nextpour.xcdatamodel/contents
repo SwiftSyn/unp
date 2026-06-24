@@ -36,7 +36,7 @@
     <entity name="NPBartenderClass" representedClassName="NPBartenderClass" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="String" defaultValueString=""/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
-        <attribute name="classDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="classDesc" attributeType="String" defaultValueString=""/>
         <attribute name="instructorName" attributeType="String" defaultValueString=""/>
         <attribute name="durationMinutes" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isLocked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

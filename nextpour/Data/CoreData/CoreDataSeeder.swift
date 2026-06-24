@@ -71,7 +71,7 @@ struct CoreDataSeeder {
         for dto in dtos {
             let e = NPBartenderClass(context: ctx)
             e.id = dto.id; e.title = dto.title
-            e.classDescription = dto.description
+            e.classDesc = dto.description
             e.instructorName = dto.instructorName
             e.durationMinutes = Int32(dto.durationMinutes)
             e.isLocked = dto.isLocked
@@ -201,7 +201,7 @@ struct CoreDataSeeder {
             }
 
             let txCount  = Int.random(in: 3...min(7, activityPool.count))
-            var pool     = activityPool.shuffled()
+            let pool     = activityPool.shuffled()
             var history  = [RewardTransactionDTO]()
 
             for i in 0..<txCount {

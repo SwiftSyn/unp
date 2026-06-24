@@ -1,7 +1,6 @@
 ﻿import Foundation
 import CoreData
 
-@MainActor
 final class DIContainer {
     static let shared = DIContainer()
 
